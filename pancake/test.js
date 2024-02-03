@@ -20,8 +20,8 @@ function instr(s, arr) {
 }
 function ctrl_t() {
 	document.dispatchEvent(new KeyboardEvent('keydown', {
-		'key': '-',//1
-		keyCode : 189,code: "Minus",which: 189,//1-49
+		'key': '11',//1
+		keyCode : 11,code: "Digit11",which: 11,//1-49
 		altKey:true//ctrlKey: true,
 	}))
 }
