@@ -1,0 +1,53 @@
+{
+  "manifest_version": 3,
+  "name": "Auto bid pancake",
+  "description": "Auto pancake",
+  "version": "1.0.1",
+  "icons": {
+    "128": "icon.png",
+    "16": "icon.png"
+  },
+  "author": "longddpitre.com",
+  
+  "web_accessible_resources": [
+    {
+      "resources": ["test.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "action": {
+    "default_icon": {                
+      "16": "icon.png",
+      "24": "icon.png",     
+      "32": "icon.png"      
+    },
+    "default_title": "Pancake",
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'",
+    "sandbox": "sandbox allow-scripts; script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "web_accessible_resources": "script-src 'self'; object-src 'self';"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://pancake.vn/*"],
+      "js": ["test.js"],
+      "css": ["style.css"],
+      "all_frames": true,
+      "run_at": "document_end"
+    }
+  ],
+  "host_permissions": [
+    "https://pancake.vn/"
+  ],
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs",
+    "notifications"
+  ],
+  "background": {
+    // "service_worker": "background.js"
+  }
+}

@@ -1,0 +1,11 @@
+a.button1 {
+	background: #000;color: #fff;padding: 10px;font-size: 20px;
+	display: inline-block;
+}
+.mytoolbox{
+	position: fixed;
+	top:0px;left: 0px;right: 300px;z-index: 9999999999999;text-align: right;display: inline-block;
+}
+a.button1.run{
+	color:red;
+}
