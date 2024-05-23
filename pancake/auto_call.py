@@ -1,5 +1,6 @@
 import phonenumbers
 import subprocess
+import time
 
 def main():
     # Đọc file danh sách số điện thoại
@@ -17,6 +18,7 @@ def main():
 
         # Gọi điện thoại
         subprocess.Popen(['ms-phone-link', 'dial', so_dien_thoai_chuan], shell=True)
+        #subprocess.Popen(['start', 'ms-phone-link:', 'tel:' + so_dien_thoai_chuan], shell=True)
 
        
         time.sleep(5)
